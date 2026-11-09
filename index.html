@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>शुभ विवाह निमन्त्रण पत्र | गोविन्द संग कस्तुरी</title>
+  
+  <!-- Auspicious Indian & Nepali Traditional Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Yatra+One&family=Gotu&family=Martel:wght@400;600;700;800;900&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Flower Petals (फूलों की वर्षा) -->
+  <canvas id="petalsCanvas"></canvas>
+
+  <!-- Top Floating Controls -->
+  <div class="top-controls">
+    <button id="musicToggleBtn" class="pill-btn" title="शहनाई संगीत चालू / बंद करें">
+      <span class="icon" id="musicIcon">🎵</span>
+      <span class="label" id="musicLabel">शहनाई धुन</span>
+    </button>
+    <button id="petalToggleBtn" class="pill-btn" title="फूलों की वर्षा करें">
+      <span class="icon">🌸</span>
+      <span class="label">पुष्प वर्षा</span>
+    </button>
+  </div>
+
+  <!-- STAGE 1: Magic Royal Envelope (जादुई शाही लिफ़ाफ़ा) -->
+  <section id="envelopeScreen" class="envelope-screen">
+    <div class="magic-stars"></div>
+
+    <div class="envelope-header-badge">
+      <div class="auspicious-shloka">॥ ॐ श्री गणेशाय नमः ॥</div>
+      <p class="envelope-intro-text">मांगलिक विवाह निमन्त्रण पत्र</p>
+      <div class="sacred-tie-pill">🚩 पावन मिथिला-नेपाल एवं भारत का पवित्र संगम 🚩</div>
+    </div>
+
+    <!-- 3D Envelope Container -->
+    <div class="envelope-wrapper" id="envelopeWrapper">
+      <div class="envelope-golden-glow"></div>
+      
+      <div class="envelope" id="envelope">
+        <!-- Top Flap (खुलने वाला ढक्कन) -->
+        <div class="flap flap-top" id="flapTop">
+          <div class="flap-golden-border"></div>
+        </div>
+
+        <!-- Left, Right, Bottom Envelope Pockets -->
+        <div class="pocket flap-left"></div>
+        <div class="pocket flap-right"></div>
+        <div class="pocket flap-bottom">
+          <div class="mithila-crest">
+            <span class="crest-symbol">卐</span>
+          </div>
+        </div>
+
+        <!-- Peeking Card Inside -->
+        <div class="preview-letter" id="previewLetter">
+          <div class="preview-inner">
+            <div class="ganesh-mini-icon">卐 ॐ 卐</div>
+            <h3 class="preview-couple">चि. गोविन्द (सॉफ्टवेयर डेवलपर) <span class="sang-symbol">संग</span> सुश्री कस्तुरी</h3>
+            <p class="preview-event">शुभ विवाह एवं प्रीतिभोज</p>
+            <p class="preview-date-badge">२२ नवम्बर • जनकपुरधाम (नेपाल)</p>
+          </div>
+        </div>
+
+        <!-- Royal Golden Wax Seal (शाही स्वर्ण मुहर) -->
+        <div class="wax-seal" id="waxSeal" title="निमन्त्रण पत्र खोलने हेतु यहाँ स्पर्श करें">
+          <div class="seal-inner">
+            <span class="seal-ganesha">ॐ</span>
+            <span class="seal-names">गोविन्द ♥ कस्तुरी</span>
+            <span class="seal-sub">शुभ विवाह</span>
+          </div>
+          <div class="seal-pulse"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Hint & Button -->
+    <div class="open-instruction-box">
+      <button class="magic-open-btn" id="openInviteBtn">
+        <span class="sparkle-anim">✨</span>
+        <span class="btn-text">निमन्त्रण पत्र खोलें (Open Invitation)</span>
+        <span class="sparkle-anim">✨</span>
+      </button>
+      <p class="tap-hint">लिफ़ाफ़े की मुहर (Seal) को स्पर्श करें और पावन निमन्त्रण का साक्षी बनें</p>
+    </div>
+  </section>
+
+  <!-- STAGE 2: Complete Grand Nepali & Mithila Style Wedding Invitation -->
+  <main id="invitationContent" class="invitation-content hidden">
+
+    <!-- Grand Traditional Wedding Card (नेपाली व मैथिली पारम्परिक विवाह पत्रिका) -->
+    <article class="card-hero-traditional">
+      
+      <!-- Mithila / Nepali Ornate Border Frame -->
+      <div class="ornate-card-border">
+        
+        <!-- Corner Ornaments -->
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+
+        <!-- Auspicious Invocations (मंगलाचरण) -->
+        <header class="card-header-deva">
+          <div class="ganesh-shloka-box">
+            <div class="ganesh-vector">
+              <!-- Auspicious Ganesha Motif -->
+              <svg viewBox="0 0 100 100" class="ganesh-svg" fill="none" stroke="currentColor">
+                <circle cx="50" cy="50" r="45" stroke="#d4af37" stroke-width="2" stroke-dasharray="4,2"/>
+                <path d="M50 18 Q62 18 68 30 Q72 42 60 52 Q50 60 50 78 Q50 65 40 54 Q28 42 32 30 Q38 18 50 18 Z" stroke="#8b0000" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="50" cy="32" r="3.5" fill="#8b0000"/>
+                <path d="M42 24 Q50 20 58 24" stroke="#d4af37" stroke-width="2.5"/>
+                <path d="M36 44 Q28 50 22 45 Q18 38 26 34" stroke="#8b0000" stroke-width="2.5"/>
+                <path d="M64 44 Q72 50 78 45 Q82 38 74 34" stroke="#8b0000" stroke-width="2.5"/>
+                <path d="M50 48 Q54 60 52 70 Q48 76 50 82" stroke="#8b0000" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="57" cy="74" r="3" fill="#d4af37"/>
+              </svg>
+            </div>
+            
+            <h1 class="main-mantra">॥ श्री गणेशाय नमः ॥</h1>
+            <p class="shloka-text">
+              वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br>
+              निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
+            </p>
+            <h2 class="sita-ram-mantra">॥ ॐ श्री सीता-रामाभ्यां नमः ॥</h2>
+          </div>
+
+          <div class="holy-land-badge">
+            <span class="kalash-icon">🏺</span>
+            <span>माता सीता की पावन प्राकट्य भूमि (सीतामढ़ी) एवं प्रभु श्री राम की पावन विवाह भूमि (जनकपुरधाम) का दिव्य बन्धन</span>
+            <span class="kalash-icon">🏺</span>
+          </div>
+
+          <div class="traditional-divider">
+            <span class="div-line"></span>
+            <span class="div-ornament">卐 &bull; ❦ &bull; 卐</span>
+            <span class="div-line"></span>
+          </div>
+
+          <div class="invitation-intro">
+            <p class="manorath-salutation">मान्यवर / आदरणीय महानुभाव,</p>
+            <p class="manorath-body">
+              भगवान श्री सीताराम जी एवं हमारे पूज्य कुलदेवता के असीम आशीर्वाद से हमारे परिवार के लाडले का शुभ विवाह एवं प्रीतिभोज का पावन आयोजन सुनिश्चित हुआ है। इस मांगलिक अवसर पर वर-वधू को अपना स्नेह, आशीर्वाद एवं शुभाशीष प्रदान करने हेतु आप सपरिवार सादर आमन्त्रित हैं।
+            </p>
+          </div>
+        </header>
+
+        <!-- COUPLE SPOTLIGHT (वर - वधू परिचय) -->
+        <section class="couple-profile-section">
+          
+          <!-- Groom (वर) -->
+          <div class="profile-card groom-theme">
+            <div class="card-badge">वर (Groom)</div>
+            <div class="divine-symbol">🚩</div>
+            <h2 class="person-dev-name">चि. गोविन्द साह</h2>
+            <div class="profession-tag">💻 सॉफ्टवेयर डेवलपर (Software Developer)</div>
+            <div class="family-line">
+              <span class="relation-tag">सुपुत्र:</span>
+              <p class="parents-name">श्रीमती सुलोचना देवी साह एवं श्री अधिकृत गौरी शंकर साह</p>
+              <p class="parent-eng-sub">(S/o Smt. Sulochana Devi Sah &amp; Shree Gauri Shankar Sah)</p>
+            </div>
+            
+            <div class="residence-box">
+              <div class="pin-icon">📍</div>
+              <div class="residence-text">
+                <strong>स्थायी निवास:</strong><br>
+                हनुमान मन्दिर, जनकपुरधाम - ११,<br>
+                धनुषा, <strong>नेपाल</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Auspicious Vivah Knot (परिणय सूत्र) -->
+          <div class="vivah-knot-container">
+            <div class="knot-circle">
+              <span class="knot-hindi">संग</span>
+              <span class="knot-eng">परिणय सूत्र</span>
+              <span class="kalash-mini">🪔</span>
+            </div>
+            <div class="shehnai-dholak-icon">🎺 💞 </div>
+          </div>
+
+          <!-- Bride (वधू) -->
+          <div class="profile-card bride-theme">
+            <div class="card-badge bride-badge">वधू (Bride)</div>
+            <div class="divine-symbol">🌸</div>
+            <h2 class="person-dev-name">आयु. कस्तुरी साह</h2>
+            
+            <div class="family-line">
+              <span class="relation-tag">सुपुत्री:</span>
+              <p class="parents-name">श्रीमती प्रीति देवी साह एवं श्री बिरजु साह</p>
+              <p class="parent-eng-sub">(D/o Smt. Preeti Devi Sah &amp; Shree Birju Sah)</p>
+            </div>
+            
+            <div class="residence-box">
+              <div class="pin-icon">📍</div>
+              <div class="residence-text">
+                <strong>स्थायी निवास:</strong><br>
+                जानकी स्थान - ०८, मण्डल नगर,<br>
+                सीतामढ़ी, बिहार, <strong>भारत</strong>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Date & Mahurat Banner -->
+        <div class="mahurat-banner">
+          <div class="mahurat-item">
+            <span class="m-icon">📅</span>
+            <div class="m-info">
+              <span class="m-label">विवाह एवं उत्सव तिथि</span>
+              <strong class="m-val">२२ नवम्बर (22nd November)</strong>
+            </div>
+          </div>
+          <div class="m-divider"></div>
+          <div class="mahurat-item">
+            <span class="m-icon">⏰</span>
+            <div class="m-info">
+              <span class="m-label">प्रीतिभोज (स्नेह मिलन) समय</span>
+              <strong class="m-val">सायं ६:०० बजे से (From 6:00 PM)</strong>
+            </div>
+          </div>
+          <div class="m-divider"></div>
+          <div class="mahurat-item">
+            <span class="m-icon">🏛️</span>
+            <div class="m-info">
+              <span class="m-label">मुख्य उत्सव स्थल</span>
+              <strong class="m-val">चौधरी कलवार विवाह भवन पार्टी पैलेश एवं गेष्ट हाउस, नमस्कार चौक, जनकपुरधाम - ७ (नेपाल)</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- LIVE COUNTDOWN (शुभ मुहूर्त की प्रतीक्षा) -->
+    <section class="traditional-section countdown-wrapper">
+      <div class="section-title-wrap">
+        <span class="top-om">ॐ</span>
+        <h3 class="sec-title">शुभ मुहूर्त की शुभ घड़ियाँ</h3>
+        <p class="sec-subtitle">विवाह एवं प्रीतिभोज उत्सव प्रारम्भ होने में शेष समय</p>
+      </div>
+
+      <div class="countdown-display" id="countdownGrid">
+        <div class="digit-box">
+          <div class="digit-number" id="days">००</div>
+          <div class="digit-name">दिन (Days)</div>
+        </div>
+        <div class="digit-sep">:</div>
+        <div class="digit-box">
+          <div class="digit-number" id="hours">००</div>
+          <div class="digit-name">घंटे (Hours)</div>
+        </div>
+        <div class="digit-sep">:</div>
+        <div class="digit-box">
+          <div class="digit-number" id="minutes">००</div>
+          <div class="digit-name">मिनट (Minutes)</div>
+        </div>
+        <div class="digit-sep">:</div>
+        <div class="digit-box">
+          <div class="digit-number" id="seconds">००</div>
+          <div class="digit-name">सेकण्ड (Seconds)</div>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="festival-action-row">
+        <button id="addToCalBtn" class="action-btn gold-btn">
+          <span>🗓️ गूगल कैलेण्डर में जोड़ें (Add to Calendar)</span>
+        </button>
+        
+        <button id="shareWhatsappBtn" class="action-btn wa-btn">
+          <span>💬 व्हाट्सऐप पर निमन्त्रण भेजें (Share on WhatsApp)</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- EVENTS & CEREMONIES (मांगलिक कार्यक्रम एवं प्रीतिभोज) -->
+    <section class="traditional-section">
+      <div class="section-title-wrap">
+        <span class="top-om">卐</span>
+        <h3 class="sec-title">मांगलिक कार्यक्रम विवरण</h3>
+        <p class="sec-subtitle">पावन वैदिक रीति-रिवाज एवं प्रीतिभोज समारोह</p>
+      </div>
+
+      <div class="program-grid">
+        <!-- Event 1: Shubh Vivah -->
+        <div class="program-card">
+          <div class="prog-badge">वैदिक रस्में</div>
+          <div class="prog-icon">🔥</div>
+          <h4 class="prog-title">शुभ विवाह (Wedding Ceremony)</h4>
+          <div class="prog-meta">
+            <p><strong>तिथि:</strong> २२ नवम्बर (22 November)</p>
+            <p><strong>अनुष्ठान:</strong> वरमाला, कन्यादान, सिन्दूर दान एवं सप्तपदी (सात फेरे)</p>
+          </div>
+          <p class="prog-desc">
+            वैदिक मन्त्रोच्चार के बीच दो पवित्र आत्माओं एवं परिवारों का आजीवन सुखद मिलन।
+          </p>
+          <div class="prog-venue-tag">
+            <span>📍 स्थल: चौधरी कलवार विवाह भवन पार्टी पैलेश एवं गेष्ट हाउस, नमस्कार चौक, जनकपुरधाम - ७ (नेपाल)</span>
+          </div>
+        </div>
+
+        <!-- Event 2: Priti Bhoj -->
+        <div class="program-card grand-feast">
+          <div class="prog-royal-ribbon">विशेष समारोह</div>
+          <div class="prog-badge">स्नेह मिलन</div>
+          <div class="prog-icon">💞+💐</div>
+          <h4 class="prog-title">प्रीतिभोज (Grand Reception)</h4>
+          <div class="prog-meta">
+            <p><strong>तिथि:</strong> २२ नवम्बर (22 November)</p>
+            <p><strong>समय:</strong> सायं ६:०० बजे से (Evening 6:00 PM Onwards)</p>
+          </div>
+          <p class="prog-desc">
+            मिथिलांचल के पारम्परिक मिष्ठान्न, स्वादिष्ट भोजन एवं आतिथ्य सत्कार के साथ नवदम्पति को आशीर्वाद देने हेतु स्नेह भोज।
+          </p>
+          <div class="prog-venue-tag highlight-tag">
+            <span>📍 स्थल: चौधरी कलवार विवाह भवन पार्टी पैलेश एवं गेष्ट हाउस, नमस्कार चौक, जनकपुरधाम - ७ (नेपाल)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENUES & DIRECTIONS (स्थान एवं मार्ग दर्शन) -->
+    <section class="traditional-section">
+      <div class="section-title-wrap">
+        <span class="top-om">📍</span>
+        <h3 class="sec-title">शुभ कार्यक्रम एवं निवास स्थल</h3>
+        <p class="sec-subtitle">समारोह स्थल एवं वर-वधू पक्ष के पावन पते</p>
+      </div>
+
+      <div class="venues-flex-grid">
+        <!-- Main Venue: Chaudhary Kalwar Vivah Bhawan -->
+        <div class="venue-detail-card featured-venue">
+          <div class="venue-tag-top">मुख्य विवाह एवं प्रीतिभोज स्थल</div>
+          <h4 class="venue-main-name">चौधरी कलवार विवाह भवन</h4>
+          <p class="venue-address-full">
+            <strong>पता:</strong> चौधरी कलवार विवाह भवन पार्टी पैलेश एवं गेष्ट हाउस, नमस्कार चौक, जनकपुरधाम - ७ (नेपाल)।
+          </p>
+          <p class="venue-brief">
+            विवाह के सभी मुख्य वैदिक कार्यक्रम तथा सायंकालीन प्रीतिभोज (६:०० बजे से) इसी भव्य स्थल पर सम्पन्न होंगे।
+          </p>
+          <div class="venue-btn-group">
+            <a href="https://maps.google.com/?q=Hotel+Namaskar+Janakpurdham+Nepal" target="_blank" rel="noopener noreferrer" class="map-link">
+              🗺️ गूगल मैप्स पर दिशा देखें
+            </a>
+            <button class="copy-addr-btn" data-copy="चौधरी कलवार विवाह भवन पार्टी पैलेश एवं गेष्ट हाउस, नमस्कार चौक, जनकपुरधाम - ७ (नेपाल)">
+              📋 पता कॉपी करें
+            </button>
+          </div>
+        </div>
+
+        <!-- Groom Family Residence -->
+        <div class="venue-detail-card">
+          <div class="venue-tag-top">वर पक्ष निवास (Groom's Home)</div>
+          <h4 class="venue-main-name">श्रीमती सुलोचना देवी एवं श्री अधिकृत गौरी शंकर साह जी का निवास</h4>
+          <p class="venue-address-full">
+            <strong>पता:</strong> हनुमान मन्दिर नजिक, जनकपुरधाम वडा नं. ११, धनुषा, नेपाल।
+          </p>
+          <p class="venue-brief">
+            वर: चि. गोविन्द साह (सॉफ्टवेयर डेवलपर) एवं समस्त साह परिवार (जनकपुरधाम)।
+          </p>
+          <div class="venue-btn-group">
+            <a href="https://maps.google.com/?q=Hanuman+Mandir+Janakpurdham+11+Nepal" target="_blank" rel="noopener noreferrer" class="map-link alt-link">
+              🗺️ जनकपुरधाम-११ देखें
+            </a>
+            <button class="copy-addr-btn" data-copy="हनुमान मन्दिर नजिक, जनकपुरधाम - ११, धनुषा, नेपाल">
+              📋 पता कॉपी करें
+            </button>
+          </div>
+        </div>
+
+        <!-- Bride Family Residence -->
+        <div class="venue-detail-card">
+          <div class="venue-tag-top">वधू पक्ष निवास (Bride's Home)</div>
+          <h4 class="venue-main-name">श्रीमती प्रीति देवी एवं श्री बिरजु साह जी का निवास</h4>
+          <p class="venue-address-full">
+            <strong>पता:</strong> जानकी स्थान - ०८, मण्डल नगर, सीतामढ़ी, बिहार, भारत।
+          </p>
+          <p class="venue-brief">
+            वधू: सुश्री कस्तुरी साह एवं समस्त साह परिवार (सीतामढ़ी)।
+          </p>
+          <div class="venue-btn-group">
+            <a href="https://maps.google.com/?q=Janaki+Sthan+Mandal+Nagar+Sitamarhi+Bihar+India" target="_blank" rel="noopener noreferrer" class="map-link alt-link">
+              🗺️ सीतामढ़ी देखें
+            </a>
+            <button class="copy-addr-btn" data-copy="जानकी स्थान - ०८, मण्डल नगर, सीतामढ़ी, बिहार, भारत">
+              📋 पता कॉपी करें
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLESSINGS GUESTBOOK (शुभाशीष एवं मंगलकामनाएं) -->
+    <section class="traditional-section">
+      <div class="section-title-wrap">
+        <span class="top-om">✍️</span>
+        <h3 class="sec-title">वर-वधू को शुभाशीष एवं मंगलकामनाएं</h3>
+        <p class="sec-subtitle">गोविन्द एवं कस्तुरी के नव दाम्पत्य जीवन हेतु अपना पावन आशीर्वाद प्रेषित करें</p>
+      </div>
+
+      <div class="blessings-layout">
+        <!-- Input Form -->
+        <form id="wishesForm" class="blessing-form">
+          
+          <!-- Relationship Choice (Friend or Family / Relative) -->
+          <div class="inp-group">
+            <label class="group-label">आपका सम्बन्ध (Relationship) *</label>
+            <div class="relation-toggle-group" id="relationGroup">
+              <label class="relation-radio-label active" for="relFamily">
+                <input type="radio" id="relFamily" name="guestRelation" value="परिवार / सम्बन्धी (Family)" checked>
+                <span class="rel-icon">👨‍👩‍👧‍👦</span>
+                <span class="rel-text">परिवार / सम्बन्धी (Family)</span>
+              </label>
+              <label class="relation-radio-label" for="relFriend">
+                <input type="radio" id="relFriend" name="guestRelation" value="मित्र (Friend)">
+                <span class="rel-icon">🤝</span>
+                <span class="rel-text">मित्र (Friend)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="inp-group">
+            <label for="guestName">आपका शुभ नाम (Full Name) *</label>
+            <input type="text" id="guestName" placeholder="उदा. रामेश्वर प्रसाद साह" required>
+          </div>
+
+          <!-- Simple Typeable Location Input (No auto-translation) -->
+          <div class="inp-group">
+            <label for="guestLocation">आपका शहर / स्थान (City / Location) *</label>
+            <input type="text" id="guestLocation" placeholder="उदा. जनकपुरधाम, सीतामढ़ी, काठमाण्डौ, Janakpur, Patna..." required>
+          </div>
+
+          <div class="inp-group">
+            <label for="guestMessage">आपका मंगल आशीर्वाद एवं सन्देश (Blessing) *</label>
+            <textarea id="guestMessage" rows="3" placeholder="प्रभु श्री राम एवं माता जानकी की कृपा आप दोनों पर सदैव बनी रहे..." required></textarea>
+          </div>
+
+          <button type="submit" class="send-blessing-btn">
+            <span>💌 आशीर्वाद प्रेषित करें (Send Blessing)</span>
+          </button>
+        </form>
+
+        <!-- Live Messages List -->
+        <div class="live-blessings-board">
+          <h4 class="board-heading">स्वजनों एवं प्रियजनों का पावन शुभाशीष</h4>
+          <div class="blessings-scroll-list" id="wishesList">
+            <!-- Wishes will render dynamically here instantly -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROYAL FOOTER / DARSHANABHILASHI (दर्शनाभिलाषी एवं स्वागतकर्ता) -->
+    <footer class="traditional-footer">
+      <div class="footer-crest">॥ स्वागताकांक्षी एवं दर्शनाभिलाषी ॥</div>
+      
+      <div class="hosts-container">
+        <div class="host-side">
+          <h4>साह परिवार (वर पक्ष)</h4>
+          <p class="host-head"> अधिवक्ता किशोरी साह, अधिकृत गौरी शंकर साह, अधिवक्ता प्रमोद प्रसाद साह,ॐ साह, श्री नारायण साह, डॉ. चन्दन, डॉ. कुन्दन, डॉ. नन्दन, अधिवक्ता विक्की, इन्जिनियर आकृति, अधिवक्ता सुशान्त, ऋषिकेश, प्रणव, रुद्र, मिष्टी, सान्वी, हर्षिता, दिव्यांश एवं समस्त साह परिवार।</p>
+          <p class="host-loc">जनकपुरधाम - ११ (हनुमान मन्दिर), धनुषा, नेपाल</p>
+        </div>
+        
+        <div class="host-center-icon">
+          <span class="om-golden">卐</span>
+        </div>
+
+        <div class="host-side">
+          <h4>साह परिवार (वधू पक्ष)</h4>
+          <p class="host-head">श्री बिरजु साह,  बेबी, चंचल, मीरा, सिद्धार्थ एवं समस्त साह परिवार</p>
+          <p class="host-loc">मण्डल नगर, जानकी स्थान - ०८, सीतामढ़ी, भारत</p>
+        </div>
+      </div>
+
+      <div class="atithi-shloka">
+        <span class="folded-hands-big">🙏</span>
+        <h3 class="atithi-txt">॥ अतिथि देवो भव: ॥</h3>
+        <p class="atithi-sub">आपकी गरिमामयी उपस्थिति एवं पावन आशीर्वाद ही हमारा सर्वोत्तम उपहार होगा।</p>
+      </div>
+
+      <!-- Re-trigger animation button -->
+      <div class="reopen-box">
+        <button id="reopenEnvelopeBtn" class="reopen-btn">
+          ✉️ जादुई लिफ़ाफ़ा पुनः खोलें (Replay Opening Animation)
+        </button>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Instant Toast Popup -->
+  <div id="toastNotification" class="toast">पता क्लिपबोर्ड पर कॉपी हो गया!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
